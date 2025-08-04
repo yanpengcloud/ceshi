@@ -90,7 +90,7 @@ show_menu() {
   while true; do
     clear
     echo "==================================================================="
-    echo "====脚本由陈喜顺老师@Chancy59850326编写，用于测试使用，请勿直接使用===="
+    echo "====脚本由陈喜顺@Chancy59850326编写，Aztec节点控制台，免费开源===="
     echo "==================================================================="
     echo "1. 运行序列器节点"
     echo "2. 查看序列节点日志"
@@ -120,7 +120,7 @@ show_menu() {
         fi
 
         # 下载脚本
-        curl -L https://raw.githubusercontent.com/erdongxin/aztec/refs/heads/main/aztec_node.sh -o /root/aztec_node.sh
+        curl -L https://raw.githubusercontent.com/yanpengcloud/ceshi/refs/heads/main/aztec_node.sh -o /root/aztec_node.sh
         sleep 1
 
         screen -ls | grep aztec | awk '{print $1}' | sed 's/\.aztec$//' | xargs -I {} screen -S {} -X quit
